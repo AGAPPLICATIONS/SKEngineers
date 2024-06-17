@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SK Engineers - Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="SKGLOGO.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+    <!-- https://fonts.google.com/ -->
+    <link href="bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="templatemo-business-oriented.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "-9YBmZvxO_8vbvwYe",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        /*  $(document).ready(function () {
+            $('#parallax-1').parallax({ imageSrc: 'img/biz-oriented-header.jpg' });
+        });*/
+        function send() {
+            let transporter = nodemailer.createTransport(transport[ defaults])
+            var email = require("emailjs");
+            var server = email.server.connect({
+                user: "agextraa868@gmail.com",
+                password: "wftzwftzwftz",
+                host: "smtp.gmail.com",
+                ssl: true
+            });
+
+
+
+
+            fullname = document.getElementById("#full_name").value;
+            companyname = document.getElementById("#company_name").value;
+            title = document.getElementById("#title").value;
+            email = document.getElementById("#email_id").value;
+            subject = document.getElementById("#subject").value;
+            phone = document.getElementById("#phone_number").value;
+            address = document.getElementById("#address").value;
+            message = document.getElementById("#message").value;
+            var data = {
+                text: "Name:" + fullname + "Company Name:" + companyname + "Title:" + title + "EmailID:" +
+                    email + "Subject:" + subject + "Phone Number:" + phone + "Address:" + address + "Message:" +
+                    message,
+                from: "AG <agextraa868@gmail.com>",
+                to: "Arnav <a.grover868@gmail.com>",
+                subject: "Someone wants to contact u lol"
+            }
+            transporter.sendMail(data);
+
+        }
+    </script>
+</head>
+<!--
+
+TemplateMo 549 Business Oriented
+
+https://templatemo.com/tm-549-business-oriented
+
+-->
+
+<body>
+    <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="img/biz-oriented-header.jpg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tm-logo">
+                        <i class="log fa-5x mr-4"><img alt="shit" src="SKGLOGO.png" width="100%" height="60%"
+                                class="log"></i>
+                        <span class="text-uppercase tm-logo-text">SK <br>Engineers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tm-nav-container-outer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                            data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="dark-blue-text"><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="services.html">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="contact.html">Contact <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="clients.html">Clients</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link tm-nav-link" href="career.html">Career </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="quality.html">Quality</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .grecaptcha-badge {
+            display: block;
+        }
+
+        h3.Template-sub-heading1 {
+            font-size: 30px;
+            color: #1cdaca;
+            margin-bottom: 20px;
+        }
+
+        h3.Template-sub-heading {
+            font-size: 24px;
+            color: #1ca7da;
+            margin-bottom: 15px;
+        }
+
+
+        .form-template {
+            margin: 30px 0px;
+        }
+
+        .form-area {
+            background-color: #fff;
+            margin-bottom: 2rem;
+            padding: 15px 20px;
+            box-shadow: 0 3px 6px 0 rgb(23 25 51 / 8%), 0 16px 32px 0 rgb(23 25 51 / 10%);
+        }
+
+        .form-content {
+            padding: 20px;
+        }
+
+        .input-box sup {
+            color: #1cbeda;
+            font-size: 12px;
+            font-weight: 700;
+            padding-left: 3px;
+        }
+
+        .input-box {
+            padding-bottom: 10px;
+        }
+
+        .input-box label {
+            width: 100%;
+            text-transform: capitalize;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-box textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button.submit-btn-template {
+            outline: none;
+            width: 100%;
+            border: none;
+            background-color: #1cd7da;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .form-content img {
+            width: 20px;
+            position: absolute;
+            top: 4px;
+            left: 0;
+        }
+
+        .form-details p {
+            padding-left: 35px;
+        }
+
+        .form-content {
+            padding: 0px 20px;
+        }
+
+        .form-details>div {
+            margin-top: 12px;
+            position: relative;
+        }
+
+        .form-details a {
+            text-decoration: none;
+            color: #35da1c;
+        }
+
+        @media (max-width:991px) {
+            .form-content {
+                padding: 0px 20px;
+            }
+        }
+    </style>
+    <div class="form-template">
+        <div class="container">
+
+            <div class="row" style="justify-content: flex-end; padding: 0%;">
+                <div class="col-lg-5">
+                    <form id="reg_form" class="ng-pristine ng-valid" method="post" action="https://script.google.com/macros/s/AKfycbxyA9qtyDDb7kuKIk3KHwwrBwwNi3xqsM8z2-pWVnqB0rTeE6kNsti7CeuTBKEdhqXf/exec" target="_blank">
+                        <div class="form-area">
+                            <div class="row">
+                                <input type="hidden" id="postid" name="postid" value="61" autocomplete="off">
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Full Name <sup>*</sup></label>
+                                        <input type="text" class="form-control" required="" name="full_name"
+                                            id="full_name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Company Name<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="company_name" id="company_name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Title<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="title" id="title">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Email <sup>*</sup></label>
+                                        <input type="email" class="form-control" required="" name="email_id"
+                                            id="email_id">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>subject<sup>*</sup></label>
+                                        <input type="text" class="form-control" required="" name="subject" id="subject">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Phone<sup>*</sup></label>
+                                        <input type="number" class="form-control" name="phone_number" id="phone_number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Address<sup>*</sup></label>
+                                        <textarea class="form-control" name="address" id="address"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <label>Message<sup>*</sup></label>
+                                        <textarea class="form-control" name="message" id="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-lg btn-block btn-success" id="lol"
+                                        onclick=send();>Submit</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-lg-7">
+                    <div class="form-content">
+
+                        <h3 class="Template-sub-heading1">Headquarters</h3>
+                        <p class="form-description"></p>
+                        <p>Ride Control LLC</p>
+
+                        <p></p>
+                        <div class="form-details">
+                            <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/global-icon.png">
+                                <p><a href="https://gabriel.com/" target="_blank">https://gabriel.com/</a></p>
+                            </div>
+                            <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/clock.png"><p>Monday – Friday, 7 a.m. – 5 p.m. CT</p>
+                            </div> -->
+                            <div class="form-address">
+                                <img src="https://gabriel.com/themes/UEM/images/pin.png">
+                                <p>39300 Country Club Drive,
+                                    Farmington Hills
+                                    MI - 48331, USA </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-7" style="margin-top: 0px !important;">
+                        <div class="form-content">
+
+
+                            <h3 class="Template-sub-heading">Customer Service</h3>
+
+                            <h4 class="Template-sub-heading">Chickasha, OK</h4>
+
+                            <p class="form-description">
+                            </p>
+                            <div class="form-details">
+                                <div class="form-phone">
+                                    <img src="https://gabriel.com/themes/UEM/images/call.png">
+                                    <p><a href="tel:73018">800.251.5932 - Monday thru Friday: 7am to 5pm CENTRAL
+                                            TIME</a>
+                                    </p>
+                                </div>
+                                <div class="form-mail">
+                                    <img src="https://gabriel.com/themes/UEM/images/email.png">
+                                    <p><a
+                                            href="mailto:800.251.5932    -     Monday thru Friday:  7am to 5pm CENTRAL TIME">customer.service@gabriel.com</a>
+                                    </p>
+                                </div>
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/click.png"><p><a href="customer.service@gabriel.com">customer.service@gabriel.com</a></p>
+                            </div> -->
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/clock.png"><p>Monday – Friday, 7 a.m. – 5 p.m. CT</p>
+                            </div> -->
+                                <div class="form-address">
+                                    <img src="https://gabriel.com/themes/UEM/images/pin.png">
+                                    <!-- <p>700 N. Industrial Blvd,
+                                    Chickasha,
+                                    OK - 73018,  USA</p> -->
+                                    <p>
+                                        700 N. Industrial Blvd,
+                                        Chickasha,
+                                        OK
+                                        - 73018,
+                                        USA
+
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-content">
+
+
+                            <h3 class="Template-sub-heading">Technical Service</h3>
+
+                            <h4 class="Template-sub-heading">AnswerGarage</h4>
+
+                            <p class="form-description"></p>
+                            <p>Need more product or application information? Have questions about an install? The
+                                Gabriel
+                                AnswerGarage can help you with a solution!</p>
+                            <p></p>
+                            <div class="form-details">
+                                <div class="form-phone">
+                                    <img src="https://gabriel.com/themes/UEM/images/call.png">
+                                    <p><a href="tel:">800.999.3903 - Monday thru Friday: 9am to 4pm EASTERN TIME</a></p>
+                                </div>
+                                <div class="form-mail">
+                                    <img src="https://gabriel.com/themes/UEM/images/email.png">
+                                    <p><a
+                                            href="mailto:800.999.3903    -      Monday thru Friday:  9am to 4pm EASTERN TIME">answer.man@gabriel.com</a>
+                                    </p>
+                                </div>
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/click.png"><p><a href="answer.man@gabriel.com">answer.man@gabriel.com</a></p>
+                            </div> -->
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/clock.png"><p>Monday – Friday, 7 a.m. – 5 p.m. CT</p>
+                            </div> -->
+                                <div class="form-address">
+                                    <img src="https://gabriel.com/themes/UEM/images/pin.png">
+                                    <!-- <p>,
+                                    ,
+                                     - ,  US</p> -->
+                                    <p>
+                                        US
+
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-content">
+
+
+                            <h3 class="Template-sub-heading">Other Facilities</h3>
+
+                            <h4 class="Template-sub-heading">Ride Control Mexicana GRC</h4>
+
+                            <p class="form-description">
+                            </p>
+                            <div class="form-details">
+                                <div class="form-website">
+                                    <img src="https://gabriel.com/themes/UEM/images/global-icon.png">
+                                    <p><a href="https://gabriel.com/"
+                                            target="_blank">http://www.grcautopartes.com.mx/</a>
+                                    </p>
+                                </div>
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/click.png"><p><a href=""></a></p>
+                            </div> -->
+                                <!-- <div class="form-website">
+                                <img src="https://gabriel.com/themes/UEM/images/clock.png"><p>Monday – Friday, 7 a.m. – 5 p.m. CT</p>
+                            </div> -->
+                                <div class="form-address">
+                                    <img src="https://gabriel.com/themes/UEM/images/pin.png">
+                                    <!-- <p>Av El Tepeyac 110,Parque Industrial El Tepeyac
+                                    El Marques,
+                                    Querétaro,CP - 76250,  Mexico</p> -->
+                                    <p>
+                                        Av El Tepeyac 110,
+                                        Parque Industrial El Tepeyac,
+                                        El Marques,
+                                        Querétaro,CP
+                                        - 76250,
+                                        Mexico
+
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section class="tm-address-box mx-auto">
+        <h3 class="tm-title-gray mb-4 text-center">Our Address</h3>
+        <hr class="mb-5 tm-hr tm-hr-s mx-auto">
+        <p class="mb-8 mx-auto text-center tm-address-text"><b>Our main plant:</b> Plot number 9B, Air Force Rd, Sector
+            50, Dabua Colony, New Industrial Township, Faridabad, Haryana,pin 121001</p>
+        <div class="mapouter mb-60">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="520" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1755.2087448725285!2d77.2837805!3d28.376455700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdff9547280c9%3A0x4fa1808703b1508a!2sS.K%20Engineers%2C%209B%2C%20Airforce%20Road%2C%20Dabua!5e0!3m2!1sen!2sin!4v1711607971552!5m2!1sen!2sin"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+
+    </section>
+    <section class="tm-address-box mx-auto">
+        <p class="mb-8 mx-auto text-center tm-address-text"><b>Our Second Plant:</b>36/B,INDUSTRIAL AREA,
+            NIT,FARIDABAD,Faridabad, Haryana, 121001</p>
+        <div class="mapouter mb-60">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="520" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d503.75742243687444!2d77.29026671770568!3d28.370239558593003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc1c4399da03%3A0x2fe5f2974770bea6!2s36%2C%20Old%20Press%20Colony%2C%20Industrial%20Area%2C%20New%20Industrial%20Township%2C%20Faridabad%2C%20Haryana%20121001!5e0!3m2!1sen!2sin!4v1711608550439!5m2!1sen!2sin"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+
+    </section>
+    <section class="tm-address-box mx-auto">
+        <p class="mb-8 mx-auto text-center tm-address-text"><b>Our Third Plant(Upcoming):</b>Plot No. 859, sector-69,
+            IMT Faridabad</p>
+        <div class="mapouter mb-60">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="520" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.8529466430755!2d77.35125007727942!3d28.3330516135078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb3e1a5fd7ab%3A0x270d71f3f126e817!2s859%2C%2069%2C%20IMT%20Main%20Rd%2C%20Mujeri%2C%20Sector%2068%2C%20Faridabad%2C%20Haryana%20121004!5e0!3m2!1sen!2sin!4v1711608938357!5m2!1sen!2sin"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+
+    </section>
+    <h3 class="tm-title-gray mb-4 text-center">Other Contact Details</h3>
+    <hr class="mb-5 tm-hr tm-hr-s mx-auto">
+    <p class="mx-auto text-center tm-address-text">Contact Numbers: +91-99589-76718; <br>+91-98110-46718;<br>
+        Email: <a href="mailto:dheerajgrover@skengineersindia.in">dheerajgrover@skengineersindia.in</a>
+        <br><strong>--}</strong> <b id="namee">Dheeraj Grover, CEO, S.K Engineers</b></p>
+
+
+    </div>
+    </div>
+    </div>
+    <center>
+        <p id="o"></p>
+    </center>
+    <footer class="container-fluid">
+        <div class="row">
+            <p class="col-lg-9 col-md-8 mb-5 mb-md-0">
+                Copyright &copy; 2024 <span class="tm-text-primary">SK Engineers</span>
+                - designed by <a rel="nofollow" target="_parent" href="mailto:a.grover868@gmail.com"
+                    class="tm-link-primary">Arnav Grover</a>
+            </p>
+            <div class="col-lg-3 col-md-4 text-right">
+                <a target="_blank" href="https://www.instagram.com/agr.over/?next=%2Fo" class="tm-social-link">
+                    <i class=" fa-2x tm-social-icon"><img class="socimg" src="insta.jpg"></i>
+                </a>
+                <a href="https://twitter.com/ArnavGrove57532" target="_blank" class="tm-social-link">
+                    <i class="fa-2x tm-social-icon"><img class="socimg" src="x.webp"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arnav-grover-801200280/" target="_blank" class="tm-social-link">
+                    <i class=" fa-2x tm-social-icon"><img class="socimg" src="lin.jpg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="js/tooplate-script.js"></script>
+
+
+</body>
+
+</html>
