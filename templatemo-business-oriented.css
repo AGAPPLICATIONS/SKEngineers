@@ -65,12 +65,34 @@ font-size: 20px; }
     justify-content: center;
     background-color: #3333339e;
     color: #9C9D9E;
-    width: 50% !important;
+    width: 35% !important;
     height: 200px;
     padding: 30px 20px;
+    transition: 0.4s;
+}
+.tm-logo:hover {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3333339e;
+    color: #9C9D9E;
+    width: 40% !important;
+    height: 220px;
+    padding: 30px 20px;
+    transition: 0.4s;
 }
 .log{
     height: 100% !important;
+
+    
+}
+.log:hover{
+    height: 100% !important;
+    width: 600px !important;
 }
 @media (max-width: 500px) {
     .tm-logo {
