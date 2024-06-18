@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/nodemailer@6.7.2/lib/nodemailer.js"></script>
     <meta charset="UTF-8">
+    
+</head> +
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SK Engineers - Contact Us</title>
@@ -27,37 +30,41 @@
             $('#parallax-1').parallax({ imageSrc: 'img/biz-oriented-header.jpg' });
         });*/
         function send() {
-            let transporter = nodemailer.createTransport(transport[ defaults])
-            var email = require("emailjs");
-            var server = email.server.connect({
-                user: "agextraa868@gmail.com",
-                password: "wftzwftzwftz",
-                host: "smtp.gmail.com",
-                ssl: true
-            });
+    const fullname = document.getElementById("full_name").value;
+    const companyname = document.getElementById("company_name").value;
+    const title = document.getElementById("title").value;
+    const email = document.getElementById("email_id").value;
+    const subject = document.getElementById("subject").value;
+    const phone = document.getElementById("phone_number").value;
+    const address = document.getElementById("address").value;
+    const message = document.getElementById("message").value;
 
+    const texted = "Name: " + fullname + " Company Name: " + companyname + " Title: " + title + " EmailID: " + email + " Subject: " + subject + " Phone Number: " + phone + " Address: " + address + " Message: " + message;
+    console.log(texted);
 
+    const transporter = mailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'agextraa868@gmail.com',
+            pass: 'wftzwftzwftz',
+        },
+    });
 
+    const mailOptions = {
+        from: 'agextraa868@gmail.com',
+        to: 'dheerajgrover76@gmail.com',
+        subject: 'Job Application',
+        text: texted,
+    };
 
-            fullname = document.getElementById("#full_name").value;
-            companyname = document.getElementById("#company_name").value;
-            title = document.getElementById("#title").value;
-            email = document.getElementById("#email_id").value;
-            subject = document.getElementById("#subject").value;
-            phone = document.getElementById("#phone_number").value;
-            address = document.getElementById("#address").value;
-            message = document.getElementById("#message").value;
-            var data = {
-                text: "Name:" + fullname + "Company Name:" + companyname + "Title:" + title + "EmailID:" +
-                    email + "Subject:" + subject + "Phone Number:" + phone + "Address:" + address + "Message:" +
-                    message,
-                from: "AG <agextraa868@gmail.com>",
-                to: "Arnav <a.grover868@gmail.com>",
-                subject: "Someone wants to contact u lol"
-            }
-            transporter.sendMail(data);
-
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
         }
+    });
+}
     </script>
 </head>
 <!--
